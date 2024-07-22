@@ -16,7 +16,7 @@ export default function Item(props:Props) {
     const itemDesign = useMemo(()=>{
        const isActive = pathName === url;
 
-       return isActive ? `bg-green-700 text-white rounded-r-full  mx-2 px-10 py-2 font-semibold text-sm`:` text-sm px-10 py-2 text-green-800 font-semibold`
+       return isActive ? `bg-[#304F66] text-white rounded-r-full  mx-2 px-10 py-2 font-semibold text-sm`:` text-sm px-10 py-2 text-[#304F66] font-semibold`
     },[pathName,url]);
 
 

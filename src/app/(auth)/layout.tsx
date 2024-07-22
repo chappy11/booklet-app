@@ -7,7 +7,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className='w-full  overflow-x-hidden flex flex-row bg-gradient-to-br  from-[#329D9C] to-[#56C596]  bg-no-repeat h-full'>
+    <main className='w-full  overflow-x-hidden flex flex-row bg-gradient-to-br  from-teal-400 to-yellow-200  bg-no-repeat h-full'>
          <div className=" flex flex-row w-[85%] m-auto  h-[90%]  bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border border-gray-100">
             <SideBar/>
             <PageComponent>
