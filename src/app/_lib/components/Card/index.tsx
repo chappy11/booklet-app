@@ -7,6 +7,6 @@ type Props = {
 export default function Card(props:Props) {
   const {children} = props;
   return (
-    <div className=' bg-white p-2 rounded-sm'>{children}</div>
+    <div className='  p-2 rounded-sm w-full bg-white bg-opacity-60 h-fit'>{children}</div>
   )
 }

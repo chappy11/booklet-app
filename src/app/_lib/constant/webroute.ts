@@ -1,9 +1,17 @@
-import { Routes } from "../types/route.enum";
+import { RouteInterface, Routes } from "../types/route.enum";
 
-export const webroutes = [
+export const webroutes:RouteInterface[] = [
     {
         name:'Dashboard',
         url:Routes.DASHBOARD
+    },
+    {
+        name:"Course",
+        url:Routes.COURSE
+    },
+    {
+        name:"Semester",
+        url:Routes.SEMESTER
     },
     {
         name:'Students',

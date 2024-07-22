@@ -9,6 +9,6 @@ type Props = {
 export default function Button(props:Props) {  
   const {title,onClick} = props;
   return (
-    <button onClick={()=>onClick?.()} className=' p-3 hover:bg-green-300 w-full bg-green-700 text-white'>{title}</button>
+    <button onClick={()=>onClick?.()} className=' p-3 hover:bg-green-300 w-full max-h-16 bg-[#304F66] text-white rounded-md'>{title}</button>
   )
 }

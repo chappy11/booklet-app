@@ -9,7 +9,7 @@ export default function SideBar() {
         })
     },[]);
     return (
-        <div className=' w-1/6 rounded-t-lg rounded-bl-lg bg-white h-full py-5 '>
+        <div className=' w-1/6 rounded-t-lg rounded-bl-lg bg-white h-full py-5 bg-opacity-60'>
             <div className=' w-full flex justify-center'>
                 <div className=' h-20  w-20 flex align-middle rounded-full bg-gray-400'/>
             </div>
