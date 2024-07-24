@@ -12,9 +12,12 @@ import { formatDate } from "../../../_lib/utils/date.utils"
 
 const CourseData = async () => {
   const data = await getCourses();
-  const totalPage = data.length / 8;
+  const getNumberPerPage = data.length / 8;
+
+  const numberOfPage = getNumberPerPage > Math.floor(getNumberPerPage) ? Math.floor(getNumberPerPage) + 1 : getNumberPerPage;
+  const arrayOfPage = Array.from({length: numberOfPage}, (_, i) => i + 1);
   
-  console.log( totalPage > Math.floor(totalPage) ? Math.floor(totalPage) + 1 : totalPage);
+  
   return (
   <div className=" w-full">
    <table className="min-w-full text-left text-sm whitespace-nowrap">
@@ -44,7 +47,11 @@ const CourseData = async () => {
     )})}
   </tbody>
       </table>
-    <div>
+      <div className="h-5"/>
+    <div className=" flex flex-row ">
+    {arrayOfPage.map(val=>(
+      <p className=" px-3 py-2 bg-gray-400 mx-2">{val}</p>
+    ))}
     </div>
    <p>{data.length}</p>
    </div>
