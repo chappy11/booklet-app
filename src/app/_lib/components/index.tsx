@@ -7,4 +7,13 @@ import TableHeader from './TableHeader';
 import TableData from './TableData';
 import TableRow from './TableRow';
 
-export { Button, SideBar, PageComponent, Card, TextInput,TableHeader,TableData,TableRow}
+export {
+  Button,
+  SideBar,
+  PageComponent,
+  Card,
+  TextInput,
+  TableHeader,
+  TableData,
+  TableRow,
+}
