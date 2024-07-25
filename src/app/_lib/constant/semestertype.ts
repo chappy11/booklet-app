@@ -10,4 +10,4 @@ export const SEMESTERTYPE = [
     name:"2nd Semester"
   }
 
-]
+];
