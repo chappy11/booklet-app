@@ -7,11 +7,11 @@ export const webroutes:RouteInterface[] = [
     },
     {
         name:"Course",
-        url:Routes.COURSE
+        url:`${Routes.COURSE}?page=1`
     },
     {
         name:"Semester",
-        url:Routes.SEMESTER
+        url:`${Routes.SEMESTER}?page=1`
     },
     {
         name:'Students',

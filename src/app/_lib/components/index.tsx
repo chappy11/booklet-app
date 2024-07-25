@@ -6,6 +6,7 @@ import TextInput from './TextInput';
 import TableHeader from './TableHeader';
 import TableData from './TableData';
 import TableRow from './TableRow';
+import Pagination from './Pagination';
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   TableHeader,
   TableData,
   TableRow,
+  Pagination,
 }

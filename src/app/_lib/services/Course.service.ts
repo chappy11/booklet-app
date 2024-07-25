@@ -1,4 +1,4 @@
-import { collection, getDocs, query } from "firebase/firestore"
+import { collection, getDocs, orderBy, query } from "firebase/firestore"
 import { FirebaseCollection } from "../types/FirebaseCollection.enum"
 import { CoursePayload, CourseType } from "../types/schema.type"
 import { addCollection } from "../utils/firebase.utils"
@@ -11,7 +11,7 @@ export const createCourse = async (payload: CoursePayload) => {
 }
 
 export const getCourses = async () => {
-  const qry = query(collection(db, FirebaseCollection.COURSE))
+  const qry = query(collection(db, FirebaseCollection.COURSE),orderBy("dateCreated","desc"));
   const querySnapShot = await getDocs(qry)
 
   let data: CourseType[] = []
@@ -20,5 +20,8 @@ export const getCourses = async () => {
     data.push({ id: val.id as string, ...(val.data() as CourseType) })
   })
 
-  return data
+  return {
+    data,
+    length:data.length
+  }
 }
