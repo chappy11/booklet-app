@@ -7,6 +7,7 @@ import TableHeader from './TableHeader';
 import TableData from './TableData';
 import TableRow from './TableRow';
 import Pagination from './Pagination';
+import DropDown from './DropDown';
 
 export {
   Button,
@@ -18,4 +19,5 @@ export {
   TableData,
   TableRow,
   Pagination,
+  DropDown
 }

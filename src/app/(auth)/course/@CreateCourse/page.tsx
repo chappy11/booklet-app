@@ -33,6 +33,9 @@ export default function CreateCourse() {
         dateCreated: new Date().toString(),
       }
       const resp = await createCourse(payload)
+      if(!resp){
+        return;
+      }
       toast.dismiss();
       toast.success("Successfully Added",{
         autoClose:2000
