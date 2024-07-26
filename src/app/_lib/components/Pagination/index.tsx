@@ -17,13 +17,13 @@ export default function Pagination(props:Props) {
   return (
     <div className=' flex flex-row gap-3 mt-2 justify-end'>
         {currentPage > 1 &&
-            <Link href={`${baseUrl}?page=${currentPage - 1}`}><p className={` px-3 py-2 bg-white bg-opacity-45 text-[#304F66] `}>Prev</p></Link>
+            <Link href={`${baseUrl}?page=${currentPage - 1}`}><p className={` px-3 py-2 rounded-md bg-white bg-opacity-45 text-[#304F66] `}>Prev</p></Link>
         }
         {arrayOfPage.map(val=>(  
-        <Link href={`${baseUrl}?page=${val}`}><p className={` px-3 py-2 ${currentPage == val ? 'bg-[#304F66] text-white' : 'bg-white bg-opacity-45 text-[#304F66]'}  `}>{val}</p></Link>
+        <Link href={`${baseUrl}?page=${val}`}><p className={` px-3 py-2 rounded-md ${currentPage == val ? 'bg-[#304F66] text-white' : 'bg-white bg-opacity-45 text-[#304F66]'}  `}>{val}</p></Link>
         ))}
         {currentPage < numberOfPage &&
-        <Link href={`${baseUrl}?page=${currentPage + 1}`}><p className={` px-3 py-2 bg-white bg-opacity-45 text-[#304F66]`}>Next</p></Link>
+        <Link href={`${baseUrl}?page=${currentPage + 1}`}><p className={` px-3 py-2 rounded-md bg-white bg-opacity-45 text-[#272a2c]`}>Next</p></Link>
         }
     </div>
     
