@@ -4,9 +4,9 @@ import Item from './Item'
 
 export default function SideBar() {
     const displayItems = useMemo(()=>{
-        return webroutes.map(val=>{
-            return <Item key={val.url} name={val.name} url={val.url}/>
-        })
+      return webroutes.map((val) => {
+        return <Item key={val.url} name={val.name} url={val.url} />
+      })
     },[]);
     return (
         <div className=' w-1/6 rounded-t-lg rounded-bl-lg bg-white h-full py-5 bg-opacity-60'>

@@ -10,15 +10,18 @@ export async function createSemester(data:SemesterPayload){
     return resp;
 }
 
-export async function getAllSemester(){
-  const qry = query(collection(db, FirebaseCollection.SEMESTER),orderBy("dateCreated","desc"));
-  const querySnapShot = await getDocs(qry);
+export async function getAllSemester(): Promise<SemesterInterface[]> {
+  const qry = query(
+    collection(db, FirebaseCollection.SEMESTER),
+    orderBy("dateCreated", "desc")
+  )
+  const querySnapShot = await getDocs(qry)
 
-  let arr:SemesterInterface[] = [];
+  let arr: SemesterInterface[] = []
 
-   querySnapShot.forEach((val) => {
+  querySnapShot.forEach((val) => {
     arr.push({ id: val.id as string, ...(val.data() as SemesterInterface) })
   })
 
-  return arr;
+  return arr
 }

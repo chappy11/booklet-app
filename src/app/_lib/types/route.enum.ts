@@ -7,7 +7,7 @@ export enum Routes {
     SEMESTER='/semester',
 }
 
-export interface RouteInterface  {
-    name:string;
-    url:string;
+export interface RouteInterface {
+  name: string
+  url: string
 }
