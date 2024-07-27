@@ -1,4 +1,5 @@
 export enum FirebaseCollection {
-    COURSE = 'course',
-    SEMESTER = 'semester',
+  COURSE = "course",
+  SEMESTER = "semester",
+  STUDENT = "student",
 }

@@ -12,11 +12,11 @@ export default function DropDown(props: Props) {
   const { label, data, onChange, value, placeholder } = props
 
   return (
-    <>
-      {label && <label className=" text-sm text-white mx-2">{label}</label>}
+    <div className=" w-full">
+      {label && <label className=" text-sm text-[#304F66] mx-2">{label}</label>}
       <select
         onChange={(e) => onChange(e.target.value)}
-        className=" outline-none px-4 py-1 rounded-xl text-slate-600 bg-white bg-opacity-35 border border-white w-full placeholder-slate-500"
+        className=" outline-none px-4 py-3 rounded-xl text-slate-600 bg-white bg-opacity-35 border border-white w-full placeholder-slate-500"
       >
         <option value={""}>{placeholder ?? ""}</option>
         {data.map((val) => {
@@ -27,6 +27,6 @@ export default function DropDown(props: Props) {
           )
         })}
       </select>
-    </>
+    </div>
   )
 }

@@ -8,3 +8,4 @@ export const GenderDropDownData: DropDownType[] = GENDER.map((val) => {
     value: val,
   }
 })
+
