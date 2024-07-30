@@ -3,7 +3,7 @@ import React from 'react'
 
 type Props = {
   placeholder: string
-  value: string
+  value?: string
   onChange: (e: string) => void
   type?: string
   label?: string
