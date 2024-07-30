@@ -8,6 +8,7 @@ import TableData from './TableData';
 import TableRow from './TableRow';
 import Pagination from './Pagination';
 import DropDown from './DropDown';
+import Maps from "./Maps"
 
 export {
   Button,
@@ -19,5 +20,6 @@ export {
   TableData,
   TableRow,
   Pagination,
-  DropDown
+  DropDown,
+  Maps,
 }

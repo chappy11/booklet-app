@@ -34,3 +34,8 @@ export type StudentInterface = {
 }
 
 export type StudentPayload = Omit<StudentInterface, "id">
+
+export type StudentResponse = StudentInterface & {
+  semester: SemesterInterface
+  course: CourseType
+}
