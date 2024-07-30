@@ -8,12 +8,9 @@ type Props = {
 export default function PageComponent(props:Props) {
     const {children} = props;
   return (
-    <div className=' w-full h-full'>
-        <Header/>
-        <div className=' flex flex-1 p-3 '>
-            {children}
-        </div>     
+    <div className=" w-full h-full">
+      <Header />
+      <div className=" flex flex-1 p-3 h-[90%] ">{children}</div>
     </div>
-    
   )
 }
