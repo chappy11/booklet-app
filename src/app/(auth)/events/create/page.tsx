@@ -42,7 +42,7 @@ export default function CreateEvents() {
   }
     return (
       <div className=" w-full">
-        <div className=" w-full bg-white bg-opacity-50 p-5 h-full overflow-auto">
+        <div className=" w-full bg-white bg-opacity-50 p-5 h-full overflow-auto rounded-lg">
           <div className=" flex flex-row flex-1  gap-5">
             <div className=" flex flex-2 flex-col">
             <h1 className=" text-[#304F66] font-bold text-lg">Create Events</h1>
@@ -69,18 +69,18 @@ export default function CreateEvents() {
             />
 
               <div className=" flex flex-col gap-1">
-                <h5 className=" text-[#304F66]">Morning</h5>
+                {/* <h5 className=" text-[#304F66]">Morning</h5> */}
                 <div className=" flex flex-row gap-5">
                   <TextInput
                     type="time"
-                    label="Check In"
+                    label="Morning Time In"
                     placeholder={"Enter event name.."}
                     value={morningCheckIn}
                     onChange={setMorningCheckIn}
                   />
                   <TextInput
                     type="time"
-                    label="Checkout"
+                    label="Morning Time out"
                     placeholder={"Enter event name.."}
                     value={morningCheckout}
                     onChange={setMorningCheckOut}
@@ -89,17 +89,17 @@ export default function CreateEvents() {
                 </div>
               </div>
               <div className=" flex flex-col gap-1">
-                <h5 className=" text-[#304F66]">Afternoon</h5>
+                {/* <h5 className=" text-[#304F66]">Afternoon</h5> */}
                   <div className=" flex flex-row gap-5">
                     <TextInput
                       type="time"
-                      label="Check In"
+                      label="Afternoon Check in"
                       placeholder={"Enter event name.."}
                       value={afternoonCheckIn}
                       onChange={setAfternoonCheckIn}
                     />
                     <TextInput
-                      label="Check Out"
+                      label="Afternoon Checkout"
                       type='time'
                       placeholder={"Enter event name.."}
                       value={afternoonCheckout}
@@ -108,7 +108,7 @@ export default function CreateEvents() {
                   </div>
                   
               </div>
-               
+              <div className=" h-3"/>
                <Button title="Submit" />            
           </div>
             </div>
