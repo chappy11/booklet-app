@@ -1,1 +1,4 @@
-export type PageParams =  { params: string, searchParams: { page: string } }
+export type PageParams = {
+  params: any
+  searchParams: { page: string; query: string }
+}

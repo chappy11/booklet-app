@@ -21,6 +21,7 @@ type Props = {
 export default async function StudentList(props: Props) {
   const { currentPage } = props
   const students = await getStudents()
+
   return (
     <div className=" w-full">
       <table className="min-w-full text-left text-sm whitespace-nowrap">

@@ -22,7 +22,7 @@ export default function Maps(props: Props) {
     id: "google-map-script",
     googleMapsApiKey: "AIzaSyCDOR5rlHGncDoXtYK01Fxzs-IHjAR1cGg",
   })
-  const { latlng, onMarkerChange } = props
+  const { latlng, onMarkerChange, isDraggable } = props
   const [map, setMap] = useState(null)
 
   const onLoad = useCallback((map: any) => {
@@ -50,8 +50,6 @@ export default function Maps(props: Props) {
       lng: e.latLng.lng(),
     }
 
-    console.log(payload)
-
     onMarkerChange(payload)
   }, [])
 
@@ -63,10 +61,9 @@ export default function Maps(props: Props) {
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
-      {/* Child components, such as markers, info windows, etc. */}
       <Marker
         position={latlng}
-        draggable
+        draggable={isDraggable}
         onDragEnd={(e) => onChangeMarker(e)}
       />
     </GoogleMap>

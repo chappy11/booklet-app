@@ -1,21 +1,23 @@
-export type CourseType =  {
-    id?:string;
-    courseCode:string;
-    courseName:string;
-    dateCreated:string;
+import { LatLng } from "../components/Maps"
+
+export type CourseType = {
+  id?: string
+  courseCode: string
+  courseName: string
+  dateCreated: string
 }
 
-export type CoursePayload = Omit<CourseType,"id">;
+export type CoursePayload = Omit<CourseType, "id">
 
 export type SemesterInterface = {
-    id?:string;
-    semesterType:string;
-    dateStart:string;
-    dateEnd:string;
-    dateCreated:string;
+  id?: string
+  semesterType: string
+  dateStart: string
+  dateEnd: string
+  dateCreated: string
 }
 
-export type SemesterPayload = Omit<SemesterInterface,'id'>;
+export type SemesterPayload = Omit<SemesterInterface, "id">
 
 export type StudentInterface = {
   id?: string
@@ -38,4 +40,24 @@ export type StudentPayload = Omit<StudentInterface, "id">
 export type StudentResponse = StudentInterface & {
   semester: SemesterInterface
   course: CourseType
+}
+
+export type EventInterface = {
+  id?: string
+  eventName: string
+  semesterId: string
+  morningCheckIn: string
+  morningCheckOut: string
+  afternoonCheckIn: string
+  afternoonCheckOut: string
+  eventDate: string
+  numberOfMinuteBreak: number
+  coordinate: LatLng
+  dateCreated: string
+}
+
+export type EventPayload = Omit<EventInterface, "id">
+
+export type EventResponse = EventInterface & {
+  semester: SemesterInterface
 }
