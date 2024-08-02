@@ -8,12 +8,10 @@ type Props = PageParams
 export default function Student(props: Props) {
   const { page, query } = props.searchParams
 
-  console.log("QUEYR", query)
-
   return (
-    <div className=" w-full">
+    <div className=" w-full flex flex-col gap-5">
       <Search />
-      <StudentList currentPage={page} />
+      <StudentList currentPage={page} query={query} />
     </div>
   )
 }

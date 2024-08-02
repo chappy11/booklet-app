@@ -36,11 +36,14 @@ export const getCourses = async () => {
   }
 }
 
-export async function getCourseById(id: string) {
+export async function getCourseById(id: string):Promise<CourseType> {
   const query = await getDoc(doc(db, FirebaseCollection.COURSE, id))
 
-  return {
+  const response:CourseType = {
     id: query.id,
-    ...query.data(),
+    ...query.data() as CourseType,
   }
+
+  return response;
+ 
 }

@@ -21,6 +21,8 @@ export default function Search() {
   return (
     <input
       type="text"
+      placeholder="Search Student"
+      className=" px-3 py-2 bg-white bg-opacity-80 w-[30%] self-end outline-none text-slate-800 rounded-md"
       onChange={(e) => handleOnChange(e.target.value)}
       defaultValue={searchParams.get("query")?.toString()}
     />
