@@ -1,4 +1,9 @@
-import { TableHeader, TableRow, TableData } from "@/app/_lib/components"
+import {
+  TableHeader,
+  TableRow,
+  TableData,
+  Pagination,
+} from "@/app/_lib/components"
 import { getEvents } from "@/app/_lib/services/Event.service"
 import { DateFormat } from "@/app/_lib/types/DateFormat.enum"
 import { Routes } from "@/app/_lib/types/route.enum"
@@ -50,11 +55,11 @@ export default async function EventData() {
           })}
         </tbody>
       </table>
-      {/* <Pagination
-        currentPage={page}
-        dataCounts={data.length}
-        baseUrl={`${Routes.COURSE}`}
-      /> */}
+      <Pagination
+        currentPage={1}
+        dataCounts={dataToDisplay.length}
+        baseUrl={`${Routes.EVENTS}`}
+      />
     </div>
   )
 }

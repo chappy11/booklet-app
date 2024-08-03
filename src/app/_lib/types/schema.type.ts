@@ -61,3 +61,21 @@ export type EventPayload = Omit<EventInterface, "id">
 export type EventResponse = EventInterface & {
   semester: SemesterInterface
 }
+
+export type Logs = {
+  key: string
+  value: string
+}
+
+export type EventLogsInterface = {
+  id?: string
+  eventID: string
+  eventDate: string
+  eventRecord: Logs[]
+  studentId: string
+  eventIsActive: boolean
+}
+
+export type EventLogsResponse = EventLogsInterface & {
+  event: EventInterface
+}

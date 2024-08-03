@@ -3,4 +3,5 @@ export enum FirebaseCollection {
   SEMESTER = "semester",
   STUDENT = "student",
   EVENT = "event",
+  EVENT_LOGS = "eventAttendanceLogs",
 }
