@@ -7,7 +7,7 @@ import {
   query,
 } from "firebase/firestore"
 import { FirebaseCollection } from "../types/FirebaseCollection.enum"
-import { StudentPayload } from "../types/schema.type"
+import { StudentInterface, StudentPayload, StudentResponse } from "../types/schema.type"
 import { addCollection } from "../utils/firebase.utils"
 import { db } from "../config/firebase"
 import { getCourseById } from "./Course.service"
@@ -49,4 +49,20 @@ export const getStudents = async () => {
   }
 
   return data
+}
+
+export const getStudentById = async(id:string):Promise<StudentResponse>=>{
+  const studentData = await getDoc(doc(db,FirebaseCollection.STUDENT,id));
+  const student = studentData.data() as StudentInterface;
+  const semester = await getSemesterById(student.semesterId);
+  const course = await getCourseById(student.courseId);
+
+  const responseData:StudentResponse = {
+    id:studentData.id,
+    semester:semester,
+    course:course,
+    ...student as StudentInterface
+  }
+
+  return responseData;
 }

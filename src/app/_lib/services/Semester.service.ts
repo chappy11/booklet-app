@@ -33,11 +33,11 @@ export async function getAllSemester(): Promise<SemesterInterface[]> {
   return arr
 }
 
-export async function getSemesterById(id: string) {
+export async function getSemesterById(id: string): Promise<SemesterInterface> {
   const query = await getDoc(doc(db, FirebaseCollection.SEMESTER, id))
 
   return {
     id: query.id,
-    ...query.data(),
+    ...(query.data() as SemesterInterface),
   }
 }

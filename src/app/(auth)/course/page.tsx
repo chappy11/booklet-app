@@ -1,5 +1,3 @@
-import { TableHeader } from "@/app/_lib/components"
-
 import CourseData from "./@CourseData/page"
 import CreateCourse from "./@CreateCourse/page"
 import { PageParams } from "@/app/_lib/types/PageParams.type";
